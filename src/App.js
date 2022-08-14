@@ -8,7 +8,7 @@ export const PageContext = createContext();
 export const usePageContext = () => useContext(PageContext);
 
 export const App = () => {
-  const pages = ["About Me", "Portfolio", "Contact", "Resume"];
+  const pages = ["About Me", "Portfolio", "Contact", "CV"];
   const [currentPage, setCurrentPage] = useState("About Me");
   return (
     <div>
