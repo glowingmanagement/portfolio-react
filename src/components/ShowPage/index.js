@@ -1,8 +1,9 @@
 import { usePageContext } from "../../App";
-import { useEffect } from "react";
 import AboutMe from "../../containers/AboutMe";
 import Portfolio from "../../containers/Portfolio";
 import Contact from "../../containers/Contact";
+import myCV from "../../assets/Josh-Holmes-CV.pdf";
+import { saveAs } from "file-saver";
 
 const ShowPage = () => {
   const { currentPage } = usePageContext();
@@ -14,7 +15,11 @@ const ShowPage = () => {
   } else if (currentPage === "Contact") {
     return <Contact />;
   } else {
-    return <h1>Downloading Resume</h1>;
+    saveAs(
+      "https://drive.google.com/file/d/1hUVGO7g0rG2cQCorFXnmiBBX12t5prU4/view?usp=sharing",
+      "Josh_Holmes_CV.pdf"
+    );
+    return <Portfolio />;
   }
 };
 

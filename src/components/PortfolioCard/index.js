@@ -24,7 +24,12 @@ const PortfolioCard = ({
         sx={{ objectFit: "contain" }}
       />
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+        <Typography
+          gutterBottom
+          variant="h5"
+          component="div"
+          sx={{ textAlign: "center" }}
+        >
           {title}
         </Typography>
       </CardContent>
