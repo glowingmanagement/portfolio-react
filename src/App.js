@@ -8,8 +8,8 @@ export const PageContext = createContext();
 export const usePageContext = () => useContext(PageContext);
 
 export const App = () => {
-  const pages = ["About Me", "Portfolio", "Contact", "CV"];
-  const [currentPage, setCurrentPage] = useState("About Me");
+  const pages = ["Portfolio", "About Me", "Contact", "CV"];
+  const [currentPage, setCurrentPage] = useState("Portfolio");
   return (
     <div>
       <PageContext.Provider value={{ pages, currentPage, setCurrentPage }}>

@@ -51,7 +51,8 @@ const MusicPlayer = () => {
   const theme = useTheme();
   const [duration, setDuration] = useState(0);
   // const duration = 222; // seconds
-  const [position, setPosition] = useState(0);
+  // const [position, setPosition] = useState(0);
+  const position = useRef(0);
   const [paused, setPaused] = useState(true);
   const [sound, setSound] = useState(new Audio(AudioFile));
 
@@ -62,7 +63,15 @@ const MusicPlayer = () => {
   }
 
   useEffect(() => {
+    let playMusic;
     paused ? sound.pause() : sound.play();
+    if (!paused) {
+      playMusic = setInterval(() => {
+        console.log(position);
+        position.value = position + 1;
+      }, 1000);
+    }
+    return () => clearInterval(playMusic);
   }, [paused]);
 
   const audioRef = useRef();
@@ -71,6 +80,10 @@ const MusicPlayer = () => {
     if (audioRef.current) {
       setDuration(Math.floor(audioRef.current.duration));
     }
+  };
+
+  const updatePosition = () => {
+    console.log(position);
   };
 
   const mainIconColor = theme.palette.mode === "dark" ? "#fff" : "#000";
@@ -106,7 +119,7 @@ const MusicPlayer = () => {
           min={0}
           step={1}
           max={duration}
-          onChange={(_, value) => setPosition(value)}
+          // onChange={(_, value) => setPosition(value)}
           sx={{
             color: theme.palette.mode === "dark" ? "#fff" : "rgba(0,0,0,0.87)",
             height: 4,
