@@ -15,8 +15,14 @@ const PortfolioCard = ({
   imageURL,
 }) => {
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardMedia component="img" height="200" image={imageURL} alt={altText} />
+    <Card sx={{ maxWidth: 345, marginLeft: 5, marginBottom: 5 }}>
+      <CardMedia
+        component="img"
+        height="200"
+        image={imageURL}
+        alt={altText}
+        sx={{ objectFit: "contain" }}
+      />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           {title}
@@ -24,10 +30,10 @@ const PortfolioCard = ({
       </CardContent>
       <CardActions sx={{ justifyContent: "center" }}>
         <Link target="_blank" href={githubLink}>
-          <GitHubIcon sx={{ fontSize: 40 }} />
+          <GitHubIcon sx={{ fontSize: 35 }} />
         </Link>
         <Link target="_blank" href={deployLink}>
-          <LinkIcon sx={{ fontSize: 40 }} />
+          <LinkIcon sx={{ fontSize: 35 }} />
         </Link>
       </CardActions>
     </Card>

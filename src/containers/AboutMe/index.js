@@ -4,7 +4,7 @@ import MusicPlayer from "../../components/MusicPlayer";
 
 const AboutMe = () => {
   return (
-    <div className="container">
+    <div className="aboutMeContainer">
       <div className="boxContainer">
         <h1 className="title">About Me</h1>
         <p className="content">

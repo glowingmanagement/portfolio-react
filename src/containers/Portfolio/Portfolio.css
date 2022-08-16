@@ -1,3 +1,9 @@
 .container {
-    padding: 30px;
+justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.title {
+    font-size: 50px;
 }
