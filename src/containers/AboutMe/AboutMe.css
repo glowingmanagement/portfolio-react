@@ -11,5 +11,17 @@
 
 .boxContainer {
     width: 50vw;
-    border: 1px red solid
+}
+
+.title {
+    text-align: center;
+}
+
+.content {
+    padding: 0 18px;
+}
+
+.musicPlayerContainer {
+    padding: 40px;
+    background-color: #aaaaaa;
 }
