@@ -49,12 +49,42 @@ const TinyText = styled(Typography)({
 
 const MusicPlayer = () => {
   const theme = useTheme();
+  // const [duration, setDuration] = useState(0);
+  const duration = 222; // seconds
+  const [position, setPosition] = useState(0);
+  // const position = useRef(0);
   const [paused, setPaused] = useState(true);
   const [sound, setSound] = useState(new Audio(AudioFile));
 
+  function formatDuration(value) {
+    const minute = Math.floor(value / 60);
+    const secondLeft = value - minute * 60;
+    return `${minute}:${secondLeft < 10 ? `0${secondLeft}` : secondLeft}`;
+  }
+
   useEffect(() => {
+    let playMusic;
     paused ? sound.pause() : sound.play();
+    if (!paused) {
+      playMusic = setInterval(() => {
+        console.log(position);
+        setPosition(position + 1);
+      }, 1000);
+    }
+    return () => clearInterval(playMusic);
   }, [paused]);
+
+  const audioRef = useRef();
+
+  const onLoadedMetadata = () => {
+    if (audioRef.current) {
+      // setDuration(Math.floor(audioRef.current.duration));
+    }
+  };
+
+  const updatePosition = () => {
+    console.log(position);
+  };
 
   const mainIconColor = theme.palette.mode === "dark" ? "#fff" : "#000";
   const lightIconColor =
@@ -81,6 +111,52 @@ const MusicPlayer = () => {
               Falling For You
             </Typography>
           </Box>
+        </Box>
+        <Slider
+          aria-label="time-indicator"
+          size="small"
+          value={position}
+          min={0}
+          step={1}
+          max={duration}
+          // onChange={(_, value) => setPosition(value)}
+          sx={{
+            color: theme.palette.mode === "dark" ? "#fff" : "rgba(0,0,0,0.87)",
+            height: 4,
+            "& .MuiSlider-thumb": {
+              width: 8,
+              height: 8,
+              transition: "0.3s cubic-bezier(.47,1.64,.41,.8)",
+              "&:before": {
+                boxShadow: "0 2px 12px 0 rgba(0,0,0,0.4)",
+              },
+              "&:hover, &.Mui-focusVisible": {
+                boxShadow: `0px 0px 0px 8px ${
+                  theme.palette.mode === "dark"
+                    ? "rgb(255 255 255 / 16%)"
+                    : "rgb(0 0 0 / 16%)"
+                }`,
+              },
+              "&.Mui-active": {
+                width: 20,
+                height: 20,
+              },
+            },
+            "& .MuiSlider-rail": {
+              opacity: 0.28,
+            },
+          }}
+        />
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            mt: -2,
+          }}
+        >
+          <TinyText>{formatDuration(position)}</TinyText>
+          <TinyText>-{formatDuration(duration - position)}</TinyText>
         </Box>
         <Box
           sx={{
@@ -112,6 +188,9 @@ const MusicPlayer = () => {
           <IconButton aria-label="next song">
             <FastForwardRounded fontSize="large" htmlColor={lightIconColor} />
           </IconButton>
+          <audio ref={audioRef} onLoadedMetadata={onLoadedMetadata}>
+            <source src={AudioFile} type="audio/x-wav" />
+          </audio>
         </Box>
       </Widget>
     </Box>
