@@ -24,4 +24,20 @@
 .musicPlayerContainer {
     padding: 40px;
     background-color: #aaaaaa;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 576px) {
+    .aboutMeContainer {
+        flex-direction: column;
+    }
+
+    .boxContainer {
+        width: 100vw;
+    }
+
+    .content {
+        text-align: center;
+    }
 }

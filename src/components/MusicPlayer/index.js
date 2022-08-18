@@ -17,7 +17,7 @@ import AudioFile from "../../assets/audio/Falling For You - MASTER v1.mp3";
 const Widget = styled("div")(({ theme }) => ({
   padding: 16,
   borderRadius: 16,
-  width: 343,
+  // width: 343,
   maxWidth: "100%",
   margin: "auto",
   position: "relative",
@@ -88,7 +88,7 @@ const MusicPlayer = () => {
   const lightIconColor =
     theme.palette.mode === "dark" ? "rgba(255,255,255,0.4)" : "rgba(0,0,0,0.4)";
   return (
-    <Box sx={{ width: "100%", overflow: "hidden" }}>
+    <Box sx={{ width: "100%", overflow: "visible" }}>
       <Widget>
         <Box sx={{ display: "flex", alignItems: "center" }}>
           <CoverImage>
