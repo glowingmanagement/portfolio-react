@@ -6,6 +6,7 @@ import Typography from "@mui/material/Typography";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkIcon from "@mui/icons-material/Link";
 import Link from "@mui/material/Link";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const PortfolioCard = ({
   title,
@@ -14,8 +15,11 @@ const PortfolioCard = ({
   deployLink,
   imageURL,
 }) => {
+  const isMobile = useMediaQuery("(max-width:650px)");
+  const marginLeft = isMobile ? 0 : 50;
+
   return (
-    <Card sx={{ maxWidth: 345, marginLeft: 5, marginBottom: 5 }}>
+    <Card sx={{ maxWidth: 345, marginLeft: { marginLeft }, marginBottom: 5 }}>
       <CardMedia
         component="img"
         height="200"
