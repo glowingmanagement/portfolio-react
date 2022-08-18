@@ -53,6 +53,7 @@ const MusicPlayer = () => {
   const duration = 222; // seconds
   const [position, setPosition] = useState(0);
   // const position = useRef(0);
+  const testPos = useRef(0);
   const [paused, setPaused] = useState(true);
   const [sound, setSound] = useState(new Audio(AudioFile));
 
@@ -67,8 +68,9 @@ const MusicPlayer = () => {
     paused ? sound.pause() : sound.play();
     if (!paused) {
       playMusic = setInterval(() => {
-        console.log(position);
-        setPosition(position + 1);
+        // setPosition(position + 1);
+        testPos.current += 1;
+        setPosition(testPos.current);
       }, 1000);
     }
     return () => clearInterval(playMusic);
@@ -80,10 +82,6 @@ const MusicPlayer = () => {
     if (audioRef.current) {
       // setDuration(Math.floor(audioRef.current.duration));
     }
-  };
-
-  const updatePosition = () => {
-    console.log(position);
   };
 
   const mainIconColor = theme.palette.mode === "dark" ? "#fff" : "#000";
