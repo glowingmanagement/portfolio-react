@@ -2,6 +2,7 @@ import "./App.css";
 import { createContext, useContext, useState } from "react";
 import NavBar from "./containers/NavBar";
 import ShowPage from "./components/ShowPage";
+import Footer from "./components/Footer";
 
 export const PageContext = createContext();
 
@@ -15,6 +16,7 @@ export const App = () => {
       <PageContext.Provider value={{ pages, currentPage, setCurrentPage }}>
         <NavBar />
         <ShowPage />
+        <Footer />
       </PageContext.Provider>
     </div>
   );
