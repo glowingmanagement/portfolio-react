@@ -186,9 +186,6 @@ const MusicPlayer = () => {
           <IconButton aria-label="next song">
             <FastForwardRounded fontSize="large" htmlColor={lightIconColor} />
           </IconButton>
-          <audio ref={audioRef} onLoadedMetadata={onLoadedMetadata}>
-            <source src={AudioFile} type="audio/x-wav" />
-          </audio>
         </Box>
       </Widget>
     </Box>
