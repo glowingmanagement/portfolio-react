@@ -2,5 +2,6 @@
     background-color: #7776BC;
     border: 1px #7776BC solid;
     position: absolute;
-    
+    width: 100%;
+    text-align: center;
 }
