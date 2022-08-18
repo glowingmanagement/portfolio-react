@@ -37,7 +37,7 @@ const ContactForm = () => {
   };
 
   return (
-    <Paper sx={{ p: 3, minWidth: "400px" }} elevation={6}>
+    <Paper sx={{ p: 3 }} elevation={6}>
       <Typography component="h1" variant="h4" align="center">
         Contact Me
       </Typography>
