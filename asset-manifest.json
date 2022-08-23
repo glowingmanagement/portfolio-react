@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.5349a467.css",
-    "main.js": "/static/js/main.bd7f1695.js",
-    "static/media/Falling For You - MASTER v1.mp3": "/static/media/Falling For You - MASTER v1.d85e2cc8a70f764c5fda.mp3",
-    "static/media/about-me-image.jpg": "/static/media/about-me-image.d201b42846e10c9b973e.jpg",
-    "static/media/ffy.png": "/static/media/ffy.560c27034d9a7ab4e16d.png",
-    "static/media/Buddy-Up.png": "/static/media/Buddy-Up.99a4be0524759f10c53f.png",
-    "static/media/police-fighter.png": "/static/media/police-fighter.c76502c54cd0f6972447.png",
-    "static/media/Josh-Holmes-CV.pdf": "/static/media/Josh-Holmes-CV.6d2d572aabb1e27f30f8.pdf",
-    "static/media/Weather-App.png": "/static/media/Weather-App.9797f6f9e8cf149e7fd4.png",
-    "static/media/Tech-blog.png": "/static/media/Tech-blog.bc46a95bb2848f1f880c.png",
-    "static/media/Work-Scheduler.png": "/static/media/Work-Scheduler.c6a6603202e2a0a42e56.png",
-    "static/media/quiz.png": "/static/media/quiz.92258c7493f581402bdc.png",
-    "static/media/password-generator.png": "/static/media/password-generator.ecbdf70ee0f35b5787d3.png",
-    "index.html": "/index.html",
-    "main.5349a467.css.map": "/static/css/main.5349a467.css.map",
-    "main.bd7f1695.js.map": "/static/js/main.bd7f1695.js.map"
+    "main.css": "/portfolio-react/static/css/main.5349a467.css",
+    "main.js": "/portfolio-react/static/js/main.1266a2b8.js",
+    "static/media/Falling For You - MASTER v1.mp3": "/portfolio-react/static/media/Falling For You - MASTER v1.d85e2cc8a70f764c5fda.mp3",
+    "static/media/about-me-image.jpg": "/portfolio-react/static/media/about-me-image.d201b42846e10c9b973e.jpg",
+    "static/media/ffy.png": "/portfolio-react/static/media/ffy.560c27034d9a7ab4e16d.png",
+    "static/media/Buddy-Up.png": "/portfolio-react/static/media/Buddy-Up.99a4be0524759f10c53f.png",
+    "static/media/police-fighter.png": "/portfolio-react/static/media/police-fighter.c76502c54cd0f6972447.png",
+    "static/media/Josh-Holmes-CV.pdf": "/portfolio-react/static/media/Josh-Holmes-CV.6d2d572aabb1e27f30f8.pdf",
+    "static/media/Weather-App.png": "/portfolio-react/static/media/Weather-App.9797f6f9e8cf149e7fd4.png",
+    "static/media/Tech-blog.png": "/portfolio-react/static/media/Tech-blog.bc46a95bb2848f1f880c.png",
+    "static/media/Work-Scheduler.png": "/portfolio-react/static/media/Work-Scheduler.c6a6603202e2a0a42e56.png",
+    "static/media/quiz.png": "/portfolio-react/static/media/quiz.92258c7493f581402bdc.png",
+    "static/media/password-generator.png": "/portfolio-react/static/media/password-generator.ecbdf70ee0f35b5787d3.png",
+    "index.html": "/portfolio-react/index.html",
+    "main.5349a467.css.map": "/portfolio-react/static/css/main.5349a467.css.map",
+    "main.1266a2b8.js.map": "/portfolio-react/static/js/main.1266a2b8.js.map"
   },
   "entrypoints": [
     "static/css/main.5349a467.css",
-    "static/js/main.bd7f1695.js"
+    "static/js/main.1266a2b8.js"
   ]
 }
